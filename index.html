@@ -3,122 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Escolinha de Vôlei</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Tela de Entrada</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <!-- Tela de Entrada -->
-  
   <div id="entrada" class="entrada-overlay">
     <div class="entrada-content">
       <h1>Bem-vindo à Escolinha de Vôlei</h1>
-      <button id="btnEntrar">Entrar</button>
-      
+      <a href="index2.html" class="btn-entrar">Entrar</a>
     </div>
   </div>
-
-  <!-- Conteúdo Principal -->
-  <div id="conteudoPrincipal" style="display:none;">
-    <header>
-      <div class="container header-content">
-        <img src="volei.png" alt="Logo Escolinha de Vôlei" class="logo" />
-        <h1>Escolinha de Vôlei</h1>
-        <nav id="navbar">
-          <ul>
-            <li><a href="#cadastro">Cadastro</a></li>
-            <li><a href="#alunos">Alunos</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#modalidades">Modalidades</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      </div>
-    </header>
-
-    <section id="cadastro" class="content-section">
-      <div class="container">
-        <h2>Cadastro de Aluno</h2>
-        <form id="formCadastro">
-          <input type="text" name="nome" placeholder="Nome completo" required />
-          <input type="number" name="idade" placeholder="Idade" required />
-          <input type="number" name="altura" step="0.01" placeholder="Altura (m)" required />
-          <input type="number" name="peso" step="0.1" placeholder="Peso (kg)" required />
-          <select name="posicao" required>
-            <option value="">Selecione a posição</option>
-            <option value="Levantador">Levantador</option>
-            <option value="Oposto">Oposto</option>
-            <option value="Central">Central</option>
-            <option value="Ponteiro">Ponteiro</option>
-            <option value="Líbero">Líbero</option>
-          </select>
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="alunos" class="content-section light-bg">
-      <div class="container">
-        <h2>Lista de Alunos Cadastrados</h2>
-        <table id="tabelaAlunos">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Altura</th>
-              <th>Peso</th>
-              <th>Posição</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Alunos serão inseridos via JavaScript -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="sobre" class="content-section">
-      <div class="container">
-        <h2>Sobre o Vôlei</h2>
-        <p>O vôlei surgiu em 1895 nos Estados Unidos e se tornou um dos esportes mais populares do mundo, envolvendo habilidade, agilidade e trabalho em equipe.</p>
-        <img src="quadra.jpg" alt="Partida de vôlei em quadra" />
-        <p>Benefícios do vôlei:</p>
-        <ul>
-          <li>Melhora o condicionamento físico</li>
-          <li>Desenvolve habilidades motoras</li>
-          <li>Incentiva o trabalho em equipe</li>
-          <li>Ensina disciplina e estratégia</li>
-        </ul>
-        <img src="ponto.jpg" alt="Equipe comemorando um ponto" />
-      </div>
-    </section>
-
-    <section id="modalidades" class="content-section light-bg">
-      <div class="container">
-        <h2>Modalidades do Vôlei</h2>
-        <p>O vôlei pode ser praticado em diferentes ambientes e com regras adaptadas, como o vôlei de quadra e o vôlei de praia.</p>
-        <img src="praia.jpg" alt="Jogo de vôlei de praia" />
-      </div>
-    </section>
-
-    <section id="contato" class="content-section">
-      <div class="container">
-        <h2>Fale Conosco</h2>
-        <form>
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu e-mail" required />
-          <textarea placeholder="Sua mensagem..." required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Escolinha de Vôlei - Todos os direitos reservados.</p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <script>
+    document.getElementById('btnEntrar').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+  

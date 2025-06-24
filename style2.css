@@ -1,0 +1,269 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Corpo e fundo */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgb(228, 238, 35), #0008ff);
+    color: #fff;
+    line-height: 1.6;
+    
+  }
+ 
+  
+  /* Cabeçalho */
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Seções */
+  .content-section {
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .light-bg {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Formulários */
+  form input,
+  form select,
+  form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #005f8a;
+  }
+  
+  /* Tabelas */
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #0077b6;
+    color: white;
+  }
+  
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* Animações */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Tela de entrada */
+  .entrada-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(43, 0, 255), #fbff00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 9999;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .entrada-content {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    animation: popIn 0.6s ease forwards;
+  }
+  
+  .entrada-content h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px #000;
+  }
+  
+  .entrada-content button {
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .entrada-content button:hover {
+    background-color: #ffca00;
+    transform: scale(1.05);
+  }
+  
+  /* Animações para entrada */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes popIn {
+    0% {transform: scale(0.5); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-wrap: wrap;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      padding: 10px 0;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+   
+  }
+  
